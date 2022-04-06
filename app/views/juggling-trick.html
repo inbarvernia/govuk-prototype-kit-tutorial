@@ -1,23 +1,25 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+  Question page template –
+  {{ serviceName }}
+  – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
-<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
 {% endblock %}
 
 {% block content %}
 
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
 
-    <form class="form" action="/check-answers" method="post">
+      <form class="form" action="/check-answers" method="post">
 
-      {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
+        {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
 
-      {{ govukTextarea({
+        {{ govukTextarea({
       name: "most-impressive-trick",
       id: "most-impressive-trick",
       label: {
@@ -27,11 +29,11 @@ Question page template – {{ serviceName }} – GOV.UK Prototype Kit
       }
       })
       }}
-      <button class="govuk-button" data-module="govuk-button">Continue</button>
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
 
-    </form>
+      </form>
 
+    </div>
   </div>
-</div>
 
 {% endblock %}
